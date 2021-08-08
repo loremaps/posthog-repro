@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import posthog from 'posthog-js';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'posthog-repro';
+
+  constructor(){
+    posthog.init('');
+  }
 }
